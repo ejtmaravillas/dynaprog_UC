@@ -141,3 +141,97 @@ $$ -->
 <div align="center"><img style="background: white;" src="svg\elXRkR1WXE.svg"></div>
 
 Unit restrictions such as offline time, maintenance schedule, security constraints, and so on are not included but can be represented in addition to those proposed above.
+
+## Dynamic Programming for Unit Commitment
+
+The dynamic programming approach has distinct advantages in
+solving generator unit commitment. For example, if the start-up cost
+of a unit is a function of the time it has been off-line (i.e., its
+temperature), then a forward dynamic-program approach is more
+suitable since the previous history of the unit can be computed at
+each stage [3]. Also, the initial conditions are easily specified and the
+computations can go forward in time as long as required. A forward
+dynamic-programming algorithm is shown by the flowchart in Fig.1.
+
+<!-- $$
+\begin{figure}[H]
+    \begin{center}
+        \begin{tikzpicture}[node distance=1.5cm]
+            \node(start)[startstop]{Start};
+            \node(pro1)[process, below of=start, yshift=-0.35cm]{$K=1$};
+            \node(pro2)[process, below of=pro1, yshift=-0.35cm]{$F_{\text {cost }}(K, I)=\min _{L}[P_{\text {cost }}(K, I)+S_{\text {cost }}(K-1, L: K, I)$\\ ``DO FOR ALL STATES IN PERIOD $K$"};
+            \node(pro3)[process, below of=pro2, yshift=-0.35cm]{$K=K+1$};
+            \node(pro4)[process, below of=pro3, yshift=-0.35cm]{${L}$ = $``N"$ feasible states in $K-1$};
+            \node(pro5)[process, below of=pro4, yshift=-0.75cm]{$F_{\text {cost }}(K, I)=\min _{L}[P_{\text {cost }}(K, I)+S_{\text {cost }}(K-1, L: K, I)+F_{\text {cost }}(K-1, L)]$\\
+                ``DO FOR ALL STATES IN PERIOD $K$"};
+            \node(dec1)[decision, below of=pro5, yshift=-2.2cm]{$K=M$, Last hour?};	
+            \node(pro6)[process, below of=dec1, yshift=-1.6cm]{Trace optimal schedule}; 
+            \node(stop1)[startstop, below of =pro6, yshift=-0.4cm]{Stop};
+            %\node(stop1)[startstop, below of =dec1, yshift=-0.9cm]{Stop};
+            
+            \draw[arrow](start) -- (pro1);
+            \draw[arrow](pro1) -- (pro2);
+            \draw[arrow](pro2) -- (pro3);
+            \draw[arrow](pro3) -- (pro4);
+            \draw[arrow](pro4) -- (pro5);
+            \draw[arrow](pro5) -- (dec1);
+            \draw[arrow](dec1) -- node[anchor=east]{Yes}(pro6);
+            \draw[arrow](pro6) -- (stop1);	
+            \draw[arrow](dec1) -- node[anchor=south]{No} +(-3.5,0) |-(pro3);
+            
+            \node [below=1cm, align=flush center,text width=8cm] at (stop1)
+            { 
+            };
+        \end{tikzpicture}
+        \caption{Unit commitment via forward dynamic programming}
+        \label{fig:flowchart}
+    \end{center}
+\end{figure}
+$$ --> 
+
+<div align="center"><img style="background: white;" src="svg\ak3iPUVhQb.svg"></div>
+<!-- $$
+		\begin{align}
+			\begin{split}
+				F_{\text {cost }}(K, I)=&\min _{L}[P_{\text {cost }}(K, I)+S_{\text {cost }}(K-1, L: K, I)\\
+				&+F_{\text {cost }}(K-1, L)]
+			\end{split}
+		\end{align}
+$$ --> 
+
+<div align="center"><img style="background: white;" src="svg\I4Tak4fOD1.svg"></div>
+where
+<!-- $$
+\begin{aligned}
+    F_{\text {cosi }}(K, I) =&\text { least total cost to arrive at state }(K, I) \\
+    P_{\text {cost }}(K, I) =&\text { production cost for state }(K, I) \\
+    S_{\text {cost }}(K-1, L: K, I) =&\text { transition cost from state }(K-1, L) \\
+    &\text { to state }(K, I)
+\end{aligned}
+$$ --> 
+
+<div align="center"><img style="background: white;" src="svg\x3ldsDJigs.svg"></div>
+
+State <!-- $(K, I)$ --> <img style="transform: translateY(0.1em); background: white;" src="svg\85vU2Vdat9.svg"> is the <!-- $I^{\text {th }}$ --> <img style="transform: translateY(0.1em); background: white;" src="svg\KpVwHOjiwg.svg"> combination in hour <!-- $K$ --> <img style="transform: translateY(0.1em); background: white;" src="svg\PCPPf7PcFG.svg">. For the forward dynamicprogramming approach, we define a strategy as the transition, or path, from one state at a given hour to a state at the next hour.
+
+Note that two new variables, $X$ and $N$, have been introduced in Fig. 2.
+
+<!-- $$
+\begin{aligned}
+    X&= \text{number of states to search each time period (hour)}\\
+    N&= \text{number of strategies, or paths, to save at each step}
+\end{aligned}
+$$ -->
+
+<div align="center"><img style="background: white;" src="svg\Jsp06llhkl.svg"></div>
+
+<!-- $$
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{state_pattern}
+    \caption{Restricted search paths in DP algorithm with $N_{K-1} = 3$ and $X = 5$ at interval $K-1$}
+    \label{fig:state_pattern}
+\end{figure}
+$$ --> 
+
+<div align="center"><img style="background: white;" src="svg\Ecg5pJLGc4.svg"></div>
