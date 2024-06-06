@@ -225,4 +225,4 @@ $$ -->
 
 <div align="center"><img style="background: white;" src="svg\Jsp06llhkl.svg"></div>
 
-![Alt text](./state_pattern.PNG?raw=true "Restricted search paths in DP algorithm with <!-- $N_{K-1} = 3$ --> <img style="transform: translateY(0.1em); background: white;" src="svg\HQU4SccLYv.svg"> and <!-- $X = 5$ --> <img style="transform: translateY(0.1em); background: white;" src="svg\lop5SIvoau.svg"> at interval <!-- $K-1$ --> <img style="transform: translateY(0.1em); background: white;" src="svg\DvzaHRhdS5.svg">")
+![Alt text](./state_pattern.PNG?raw=true "Restricted search paths in DP algorithm with $N_{K-1} = 3$ and $X = 5$ at interval $K-1$")
