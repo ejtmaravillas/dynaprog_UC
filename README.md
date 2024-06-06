@@ -38,7 +38,7 @@ presented followed by the resulting schedule of the start-up and shut down of ge
     \end{aligned}
 $$ --> 
 
-<div align="center"><img style="background: white; color: green" src="svg\ew908eWgMN.svg"></div>
+<div align="center"><img style="background: white;" src="svg\ew908eWgMN.svg"></div>
 
 ### Objective Function
 
@@ -52,4 +52,92 @@ function of UC problem can be modified as
 \end{equation}\
 $$ --> 
 
-<div align="center"><img style="background: white; color: green" src="svg\BgqJFoaT18.svg"></div>
+<div align="center"><img style="background: white;" src="svg\BgqJFoaT18.svg"></div>
+
+### System Constraints
+
+ Power balance constraints: The total unit generation output
+must satisfy the system load demand requirement at each time step
+t, therefore
+
+<!-- $$
+\begin{equation}
+    \sum_{i=1}^{N} u(i, t) p(i, t)=L(t)
+\end{equation}
+				
+where is $L(t) $ the load demand.
+$$ --> 
+
+<div align="center"><img style="background: white;" src="svg\1obPLKMjBu.svg"></div>
+
+2) Reserve generation capacity: Spinning reserve is the term used
+to describe the total amount of generation available from all units
+synchronized (i.e., spinning) on the system, minus the present load
+and losses being supplied
+
+<!-- $$
+\begin{equation}
+    \sum_{i=1}^{N} u(i, t)\left[P_{i}^{\max }-p(i, t)\right] \geq R(t)\\
+\end{equation}
+$$ --> 
+
+<div align="center"><img style="background: white;" src="svg\IH9RmG3xF1.svg"></div>
+
+### Unit Constraints
+
+1) Maximum/Minumum generation limits: For each committed
+unit, the power generation p(i, t) should be within the generation
+limits of the unit, i.e. between its minimum and maximum possible
+generation. This can be expressed as:
+
+<!-- $$
+\begin{equation}
+    u(i, t) P_{i}^{\min } \leq p(i, t) \leq u(i, t) P_{i}^{\max } \quad \forall i \in N, t \in 1 \ldots T
+\end{equation}
+$$ --> 
+
+<div align="center"><img style="background: white;" src="svg\wwnJVmz037.svg"></div>
+
+2) Minimum up time and down time: Once a plant turns on, it
+must stay on for a certain number of hours before it can be turned
+off again. Similarly, once off it must stay off for a certain number of
+hours before it can be turned on again.
+
+<!-- $$
+\begin{align}
+    \text { If } u(i, t)=&1 \text { and } t_{i}^{u p}<t_{i}^{u p, \min } \text { then } u(i, t+1)=1\\
+    \text { If } u(i, t)=&0 \text { and } t_{i}^{\text {down }}<t_{i}^{\text {down }, \min } \text { then } u(i, t+1)=0
+\end{align}
+$$ --> 
+
+<div align="center"><img style="background: white;" src="svg\j5irMHPiQ5.svg"></div>
+
+3) Maximum ramp rates: To avoid damaging the turbine, the
+electrical output of a unit cannot change by more than a certain
+amount over a period of time.
+
+<!-- $$
+\begin{align}
+    \text{Ramp up}\rightarrow \quad &p(i, t+1)-p(i, t) \leq \Delta P_{i}^{u p, \max }\\
+    \text{Ramp down}\rightarrow \quad &p(i, t)-p(i, t+1) \leq \Delta P_{i}^{\text {down }, \max }
+\end{align}
+$$ --> 
+
+<div align="center"><img style="background: white;" src="svg\jldrNVpkTr.svg"></div>
+
+4) Unit Hot/Cold Start Constraints: A recently shut-down plant
+generally is quicker and more efficient to start-up than a cooled one.
+This difference in cost can be modeled in the costfunction. We assume
+a step-function for the cost. If a plant is turned off within some time
+period, it only requires the cold start cost, else the hot-start cost. This
+is expressed below
+
+<!-- $$
+\begin{equation}
+    \text { StartupCost }= \begin{cases}\text { hotstartcost, } & \text { if down-time } \leq \text { cold start } \mathrm{T} \\ \text { coldstartcost, } & \text { otherwise }\end{cases}
+\end{equation}
+$$ --> 
+
+<div align="center"><img style="background: white;" src="svg\elXRkR1WXE.svg"></div>
+
+Unit restrictions such as offline time, maintenance schedule, security constraints, and so on are not included but can be represented in addition to those proposed above.
