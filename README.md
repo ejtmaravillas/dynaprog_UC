@@ -225,13 +225,4 @@ $$ -->
 
 <div align="center"><img style="background: white;" src="svg\Jsp06llhkl.svg"></div>
 
-<!-- $$
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{state_pattern}
-    \caption{Restricted search paths in DP algorithm with $N_{K-1} = 3$ and $X = 5$ at interval $K-1$}
-    \label{fig:state_pattern}
-\end{figure}
-$$ --> 
-
-<div align="center"><img style="background: white;" src="svg\Ecg5pJLGc4.svg"></div>
+![Alt text](./state_pattern.PNG?raw=true "Restricted search paths in DP algorithm with <!-- $N_{K-1} = 3$ --> <img style="transform: translateY(0.1em); background: white;" src="svg\HQU4SccLYv.svg"> and <!-- $X = 5$ --> <img style="transform: translateY(0.1em); background: white;" src="svg\lop5SIvoau.svg"> at interval <!-- $K-1$ --> <img style="transform: translateY(0.1em); background: white;" src="svg\DvzaHRhdS5.svg">")
