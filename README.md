@@ -225,4 +225,4 @@ $$ -->
 
 <div align="center"><img style="background: white;" src="svg\Jsp06llhkl.svg"></div>
 
-<div align="center"><img style="background: white;" src="svg\state_pattern.png"></div>
+<div align="center"><img style="background: white;" src="svg\state_pattern.svg"></div>
