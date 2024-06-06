@@ -38,4 +38,18 @@ presented followed by the resulting schedule of the start-up and shut down of ge
     \end{aligned}
 $$ --> 
 
-<div align="center"><img style="background: white;" src="svg\ew908eWgMN.svg"></div>
+<div align="center"><img style="background: white; color: green" src="svg\ew908eWgMN.svg"></div>
+
+### Objective Function
+
+When working on an optimization problem, we work towards
+maximizing or minimizing an objective function. The objective
+function of UC problem can be modified as
+
+<!-- $$
+\begin{equation}
+    \min _{u(i, t) ; p(i, t)} \sum_{t=1}^{T} \sum_{i=1}^{N}\left\{C_{i}[p(i, t)]+S C_{i}[u(i, t)]\right\}
+\end{equation}\
+$$ --> 
+
+<div align="center"><img style="background: white; color: green" src="svg\BgqJFoaT18.svg"></div>
