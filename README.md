@@ -225,4 +225,4 @@ $$ -->
 
 <div align="center"><img style="background: white;" src="svg\Jsp06llhkl.svg"></div>
 
-![Alt text](./state_pattern.PNG?raw=true "Restricted search paths in DP algorithm with $N_{K-1} = 3$ and $X = 5$ at interval $K-1$")
+<div align="center"><img style="background: white;" src="svg\state_pattern.png"></div>
