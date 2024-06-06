@@ -225,4 +225,6 @@ $$ -->
 
 <div align="center"><img style="background: white;" src="svg\Jsp06llhkl.svg"></div>
 
-<div align="center"><img style="background: white;" src="svg\state_pattern.svg"></div>
+![state_pattern](https://github.com/ejtmaravillas/dynaprog_UC/assets/9035824/ba032663-8775-43de-a318-66786473fcd1)
+![state_pattern](https://github.com/ejtmaravillas/dynaprog_UC/assets/9035824/ba032663-8775-43de-a318-66786473fcd1)
+![state_pattern](https://github.com/ejtmaravillas/dynaprog_UC/assets/9035824/ba032663-8775-43de-a318-66786473fcd1)
