@@ -224,6 +224,8 @@ Note that two new variables, $X$ and $N$, have been introduced in Fig. 2.
 $$ -->
 
 <div align="center"><img style="background: white;" src="svg\Jsp06llhkl.svg"></div>
+Fig. 1: Unit commitment via forward dynamic programming
+![forwarddynamicprog](https://github.com/ejtmaravillas/dynaprog_UC/assets/9035824/7b7e325a-bb46-4650-9f39-eea8a9fa3a86)
 
 Fig. 2: Restricted search paths in DP algorithm with NK−1 = 3 and X = 5 at interval K − 1
 ![state_pattern](https://github.com/ejtmaravillas/dynaprog_UC/assets/9035824/ba032663-8775-43de-a318-66786473fcd1)
