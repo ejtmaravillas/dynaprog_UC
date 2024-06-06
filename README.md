@@ -225,6 +225,7 @@ $$ -->
 
 <div align="center"><img style="background: white;" src="svg\Jsp06llhkl.svg"></div>
 
-![state_pattern](https://github.com/ejtmaravillas/dynaprog_UC/assets/9035824/ba032663-8775-43de-a318-66786473fcd1)
 Fig. 2: Restricted search paths in DP algorithm with NK−1 = 3 and X = 5 at interval K − 1
+![state_pattern](https://github.com/ejtmaravillas/dynaprog_UC/assets/9035824/ba032663-8775-43de-a318-66786473fcd1)
+
 
